@@ -1,0 +1,16 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.6.1/dist/browser.script.iife.js"></script>
+  <script type="text/ruby">
+    require "js"
+
+    clickable = JS.global[:document].querySelector('#clickable')
+    clickable.addEventListener('click') do |_event|
+      JS.eval('alert("Text clicked!")')
+    end
+  </script>
+</head>
+<body>
+  <div id="clickable">Click Here!</div>
+</body>
+</html>
