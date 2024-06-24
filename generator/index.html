@@ -24,22 +24,23 @@
 
     require 'js'
 
-    clickable = JS.global[:document].querySelector('#clickable')
-    display_prime = JS.global[:document].querySelector('#display-prime')
+    clickable = JS.global[:document].querySelector('#next-number')
+    display_number = JS.global[:document].querySelector('#display-number')
     fibonacci = FibonacciGenerator.new
     clickable.addEventListener('click') do |_event|
-      display_prime.setAttribute('value', fibonacci.next)
+      display_number.setAttribute('value', fibonacci.next)
     end
     reset_button = JS.global[:document].querySelector('#clickable-reset')
     reset_button.addEventListener('click') do |_event|
       fibonacci.reset
-      display_prime.setAttribute('value', 1)
+      display_number.setAttribute('value', 1)
     end
   </script>
 </head>
 <body>
-<div id="clickable">Click Here!</div>
-<input type="text" id="display-prime" value="1">
+<h1>Fibonacci generator</h1>
+<input type="text" id="display-number" value="1">
+<input type="button" id="next-number" value="Next">
 <input type="button" id="clickable-reset" value="Reset">
 </body>
 </html>
