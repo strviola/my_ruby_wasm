@@ -11,11 +11,20 @@
     next_button.addEventListener('click') do |_event|
       display_prime.setAttribute('value', primes.next)
     end
+    reset_button = JS.global[:document].querySelector('#clickable-reset')
+    reset_button.addEventListener('click') do |_event|
+      primes = Prime.each
+      display_prime.setAttribute('value', '')
+    end
   </script>
 </head>
 <body>
 <h1>Prime generator</h1>
 <input type="text" id="display-prime" value="" size="30">
 <input type="button" id="next-prime" value="Next">
+<input type="button" id="clickable-reset" value="Reset">
+<div>
+  <a href="../index.html">Back</a>
+</div>
 </body>
 </html>
