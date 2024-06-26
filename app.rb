@@ -1,5 +1,9 @@
-require 'bundler/setup'
-require 'rainbow'
-
-puts Rainbow('Hello RubyGems').green + ' with ' +
-       Rainbow('WebAssembly').underline.bright + '!'
+eval$s=%q(eval(%w(
+ pu            ts
+  (%          (e
+   va        l$
+    s=      %q
+     (#    $s
+      ))  )#
+       )*""
+        ))
